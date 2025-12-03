@@ -10,17 +10,36 @@
 <body>
 
 <!-- ===================================================== -->
+    <meta name="description" content="Systematic review of algorithms and advancements in detecting deepfakes, comparing machine learning and deep learning approaches, datasets, and performance." />
+    <meta name="author" content="Ángel Salazar, Johel Cuasapaz, Iván Fierro" />
 <!-- HERO SECTION -->
+    <link rel="icon" href="assets/model_architectures_pie.png" />
 <!-- ===================================================== -->
 <header class="hero">
     <div class="hero-content">
         <h1>Detecting Deepfakes: A Modern Review</h1>
         <p>A systematic analysis of machine learning and deep learning models for detecting AI-generated media.</p>
         <a href="#video" class="btn">Watch Our Video</a>
-    </div>
+        <a href="#abstract" class="btn" aria-label="Jump to abstract">Read Abstract</a>
+        <a href="Review_Paper_on_Algorithms_and_Advancements_in_Detecting_Deepfakes.pdf" class="btn" aria-label="Download the review paper" download>Download Paper (PDF)</a>
 </header>
 
 <!-- ===================================================== -->
+<!-- ===================================================== -->
+<!-- ABSTRACT -->
+<!-- ===================================================== -->
+<section id="abstract" class="section alt" aria-labelledby="abstract-title">
+    <h2 id="abstract-title">Abstract</h2>
+    <p>
+        This webpage accompanies our paper, "Review Paper on Algorithms and Advancements in Detecting Deepfakes." We synthesize
+        recent progress in automated deepfake detection, comparing traditional machine learning with deep learning approaches,
+        discussing dataset biases (e.g., FF++ prevalence) and generalization gaps on challenging benchmarks like DFDC.
+        We provide a visual summary, a poster, and a video overview.
+    </p>
+    <p>
+        <a class="btn" href="Review_Paper_on_Algorithms_and_Advancements_in_Detecting_Deepfakes.pdf" aria-label="Open the review paper PDF">Open Paper (PDF)</a>
+    </p>
+</section>
 <!-- THE PROBLEM -->
 <!-- ===================================================== -->
 <section id="problem" class="section">
@@ -30,9 +49,9 @@
         the creation of highly realistic fake videos and images. Human ability to detect deepfakes is extremely low,
         with accuracy rates barely above chance. This project analyzes the current state of automated detection 
         models and evaluates how well modern ML and DL techniques perform.
-    </p>
-</section>
-
+        <img src="assets/combined-AC-AUC-scatter.png" alt="Scatter plot comparing average accuracy vs AUC across models">
+        <img src="assets/dataset-distribution-bar.png" alt="Bar chart of dataset distribution across studies">
+        <img src="assets/model_architectures_pie.png" alt="Pie chart of model architectures used in reviewed papers">
 <!-- ===================================================== -->
 <!-- METHODS -->
 <!-- ===================================================== -->
@@ -52,6 +71,9 @@
         </div>
         <div class="card">
             <h3>30 Final Papers</h3>
+    <p style="margin-top:12px; font-size:0.95em;">
+        If the video doesn't load, <a href="https://www.youtube.com/watch?v=XXXXXXXXX" aria-label="Open video in YouTube">open it on YouTube</a>.
+    </p>
             <p>Included after PRISMA screening.</p>
         </div>
         <div class="card">
@@ -70,7 +92,7 @@
     <ul class="highlight-list">
         <li><strong>Deep Learning dominates</strong> with ~94% average accuracy.</li>
         <li>Machine learning models remain significantly behind (~73%).</li>
-        <li>FF++ dataset overrepresented (45%), creating performance bias.</li>
+    <p>© 2025 Deepfake Detection Review Project • <a href="Review_Paper_on_Algorithms_and_Advancements_in_Detecting_Deepfakes.pdf" aria-label="Download the review paper PDF">Paper (PDF)</a></p>
         <li>Models show strong performance in controlled datasets but drop in real-world settings (DFDC).</li>
     </ul>
 </section>
@@ -114,9 +136,10 @@
     <h2>Research Poster</h2>
     <p>Here you can view or download our poster summarizing the project.</p>
 
-    <img class="poster-img" src="assets/poster.png" alt="Research Poster">
+        <img class="poster-img" src="assets/Boolean-Diagram.png" alt="Key boolean diagram summarizing inclusion/exclusion criteria for the systematic review">
 
-    <a href="assets/poster.png" class="btn" download>Download Poster</a>
+        <a href="poster/Póster científico_G5.pdf" class="btn" aria-label="Open the scientific poster (PDF)" target="_blank">Open Poster (PDF)</a>
+        <a href="poster/Póster científico_G5.pdf" class="btn" download aria-label="Download the scientific poster PDF">Download Poster (PDF)</a>
 </section>
 
 <!-- ===================================================== -->
