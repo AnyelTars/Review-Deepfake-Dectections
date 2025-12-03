@@ -64,7 +64,34 @@ body {
 
 .image-grid img {
     width: 100%;
+    max-width: 800px;
     border-radius: 10px;
+}
+
+/* Inline metrics block */
+.metrics {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.metric-card {
+    background: #f0f0f0;
+    border-radius: 10px;
+    padding: 16px 20px;
+    min-width: 160px;
+    text-align: center;
+}
+
+.metric-value {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.metric-label {
+    color: #555;
 }
 
 /* Video Section */
@@ -83,10 +110,18 @@ body {
 
 /* Poster */
 .poster-img {
-    width: 70%;
+    width: 60%;
+    max-width: 1000px;
+    height: auto;
     display: block;
     margin: 20px auto;
     border-radius: 10px;
+}
+
+.poster-note {
+    text-align: center;
+    font-size: 0.95em;
+    color: #555;
 }
 
 /* Authors */
