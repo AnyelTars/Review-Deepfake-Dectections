@@ -21,7 +21,18 @@
         <p>A systematic analysis of machine learning and deep learning models for detecting AI-generated media.</p>
         <a href="#video" class="btn">Watch Our Video</a>
         <a href="#abstract" class="btn" aria-label="Jump to abstract">Read Abstract</a>
-        <a href="Review_Paper_on_Algorithms_and_Advancements_in_Detecting_Deepfakes.pdf" class="btn" aria-label="Download the review paper" download>Download Paper (PDF)</a>
+    <a href="https://github.com/AnyelTars/Review-Deepfake-Dectections/blob/main/Review_Paper_on_Algorithms_and_Advancements_in_Detecting_Deepfakes.pdf" class="btn" aria-label="Open the review paper on GitHub" target="_blank" rel="noopener noreferrer">Open Paper (GitHub)</a>
+        <nav aria-label="Primary">
+            <ul style="list-style:none; display:flex; gap:12px; justify-content:center; padding:0; margin-top:18px; flex-wrap:wrap;">
+                <li><a class="btn" href="#problem">Problem</a></li>
+                <li><a class="btn" href="#methods">Methodology</a></li>
+                <li><a class="btn" href="#datasets">Datasets</a></li>
+                <li><a class="btn" href="#figures">Figures</a></li>
+                <li><a class="btn" href="#poster">Poster</a></li>
+                <li><a class="btn" href="#authors">Authors</a></li>
+                <li><a class="btn" href="#references-title">References</a></li>
+            </ul>
+        </nav>
 </header>
 
 <!-- ===================================================== -->
@@ -37,19 +48,92 @@
         We provide a visual summary, a poster, and a video overview.
     </p>
     <p>
-        <a class="btn" href="Review_Paper_on_Algorithms_and_Advancements_in_Detecting_Deepfakes.pdf" aria-label="Open the review paper PDF">Open Paper (PDF)</a>
+    <a class="btn" href="https://github.com/AnyelTars/Review-Deepfake-Dectections/blob/main/Review_Paper_on_Algorithms_and_Advancements_in_Detecting_Deepfakes.pdf" aria-label="Open the review paper on GitHub" target="_blank" rel="noopener noreferrer">Open Paper (GitHub)</a>
     </p>
+</section>
+<!-- ===================================================== -->
+<!-- DATASETS & BENCHMARKS -->
+<!-- ===================================================== -->
+<section id="datasets" class="section" aria-labelledby="datasets-title">
+    <h2 id="datasets-title">Datasets & Benchmarks</h2>
+    <p>
+        We summarize the benchmark datasets most frequently used in the reviewed studies and their implications for
+        model generalization. Overreliance on FF++ often inflates reported accuracy, while DFDC presents more realistic
+        challenges due to greater diversity in compression, lighting, and demographics.
+    </p>
+    <div class="image-grid">
+        <img src="assets/dataset-distribution-bar.png" alt="Bar chart of dataset distribution across reviewed studies" loading="lazy">
+    </div>
+    <p style="font-size:0.95em; color:#555;">
+        Interpreting performance requires cross-dataset evaluation; models that excel on FF++ may drop substantially on DFDC.
+    </p>
+</section>
+<!-- ===================================================== -->
+<!-- REFERENCES (SELECTED) -->
+<!-- ===================================================== -->
+<section class="section" aria-labelledby="references-title">
+    <h2 id="references-title">Selected References</h2>
+    <ol class="highlight-list">
+        <li>
+            DeepStrike. Deepfake Statistics 2025. <em>DeepStrike 2025</em>. Accessed: 2024-11-20.
+            <br>
+            <a href="https://deepstrike.example/2025-report" target="_blank" rel="noopener noreferrer" aria-label="DeepStrike 2025 report">Link (placeholder)</a>
+        </li>
+        <li>
+            Chesney, R.; Citron, D. Deep Fakes: A Looming Challenge for Privacy, Democracy, and National Security.
+            <em>SSRN Electronic Journal</em> 2019.
+            <br>
+            <a href="https://doi.org/10.2139/ssrn.3213954" target="_blank" rel="noopener noreferrer" aria-label="SSRN DOI for Chesney and Citron">https://doi.org/10.2139/ssrn.3213954</a>
+        </li>
+        <li>
+            Jumio. 2024 Online Identity Study: Global Consumer Research. 2024. Accessed 2025-10-16.
+            <br>
+            <a href="https://www.jumio.com/2024-identity-study/" target="_blank" rel="noopener noreferrer" aria-label="Jumio 2024 identity study">https://www.jumio.com/2024-identity-study/</a>
+        </li>
+    </ol>
+</section>
+<!-- ===================================================== -->
+<!-- OBJECTIVES & RESEARCH QUESTIONS -->
+<!-- ===================================================== -->
+<section class="section alt" aria-labelledby="objectives-title">
+    <h2 id="objectives-title">Objectives & Research Questions</h2>
+    <p>We summarize our goals and guiding questions to frame the review and its evaluation criteria.</p>
+    <ul class="highlight-list">
+        <li>Analyze the effectiveness of current machine learning approaches in detecting deepfakes and synthetic accounts.</li>
+        <li>Examine and compare reference datasets used to train and evaluate detectors, identifying suitability and gaps.</li>
+        <li>Investigate ethical implications of automated verification systems, including privacy and algorithmic biases.</li>
+    </ul>
+    <div class="cards">
+        <div class="card">
+            <h3>RQ1</h3>
+            <p>How effective are current machine learning approaches in detecting deepfakes and synthetic accounts?</p>
+        </div>
+        <div class="card">
+            <h3>RQ2</h3>
+            <p>Which models or algorithms offer the highest accuracy and robustness in identifying manipulated content?</p>
+        </div>
+    </div>
 </section>
 <!-- THE PROBLEM -->
 <!-- ===================================================== -->
 <section id="problem" class="section">
     <h2>The Problem</h2>
-    <p>
-        Deepfakes have rapidly become one of the biggest challenges in modern digital environments, enabling
-        the creation of highly realistic fake videos and images. Human ability to detect deepfakes is extremely low,
-        with accuracy rates barely above chance. This project analyzes the current state of automated detection 
-        models and evaluates how well modern ML and DL techniques perform.
-    </p>
+        <p>
+            The exponential growth of generative technologies has radically transformed the digital media landscape.
+            Deep learning tools like GANs and modern LLMs enable hyperrealistic synthetic content (deepfakes) that
+            can be weaponized for misinformation and fraud. According to DeepStrike (2025), deepfake files surged from
+            500,000 in 2023 to over 8 million in 2025 (+1,500%), while deepfake-related fraud attempts rose by 3,000%
+            in 2023 (including +1,740% in North America). Human detection of high-quality manipulations is critically
+            low (~24.5%), underscoring the need for automated detectors and standardized evaluation.
+        </p>
+        <p>
+            Ecuadorian context: official bulletins report school incidents where students used AI to generate sexualized
+            images of peers, constituting child sexual content and cyberbullying. In 2024, authorities recorded 8,724 ICT-related
+            crime notices, including 1,030 electronic fraud, 105 computer falsification, 118 child pornography cases,
+            and 105 cases where criminals exploited deepfakes (identity theft, fraudulent calls). Reports also warn that
+            criminal groups deploy deepfakes to impersonate victims, extort, and simulate kidnappings—deceiving families
+            of missing migrants. These trends highlight both social harm and the urgency for robust, generalizable detection.
+        </p>
     <div class="metrics">
         <div class="metric-card">
             <div class="metric-value">~94%</div>
@@ -84,9 +168,6 @@
         </div>
         <div class="card">
             <h3>30 Final Papers</h3>
-    <p style="margin-top:12px; font-size:0.95em;">
-        If the video doesn't load, <a href="https://www.youtube.com/watch?v=XXXXXXXXX" aria-label="Open video in YouTube">open it on YouTube</a>.
-    </p>
             <p>Included after PRISMA screening.</p>
         </div>
         <div class="card">
@@ -94,6 +175,9 @@
             <p>Evaluation of models, datasets, and metrics.</p>
         </div>
     </div>
+        <div class="image-grid" style="margin-top: 20px;">
+            <img src="assets/Boolean-Diagram.png" alt="Boolean diagram illustrating PRISMA-style inclusion/exclusion criteria" loading="lazy">
+        </div>
 </section>
 
 <!-- ===================================================== -->
@@ -134,12 +218,15 @@
     <!-- Replace the link below with your YouTube URL or MP4 local file -->
     <div class="video-container">
         <iframe 
-            src="https://www.youtube.com/embed/XXXXXXXXX"
+            src="https://www.youtube.com/embed/Z3ugVR6AZiA"
             title="Project Video"
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
     </div>
+    <p style="margin-top:12px; font-size:0.95em;">
+        If the video doesn't load, <a href="https://www.youtube.com/watch?v=Z3ugVR6AZiA" aria-label="Open video in YouTube" target="_blank" rel="noopener noreferrer">open it on YouTube</a>.
+    </p>
 </section>
 
 <!-- ===================================================== -->
@@ -183,7 +270,7 @@
 <!-- FOOTER -->
 <!-- ===================================================== -->
 <footer>
-    <p>© 2025 Deepfake Detection Review Project</p>
+    <p>© 2025 Deepfake Detection Review Project • <a href="https://github.com/AnyelTars/Review-Deepfake-Dectections/blob/main/Review_Paper_on_Algorithms_and_Advancements_in_Detecting_Deepfakes.pdf" aria-label="Open the review paper on GitHub" target="_blank" rel="noopener noreferrer">Paper (GitHub)</a></p>
 </footer>
 
 </body>
